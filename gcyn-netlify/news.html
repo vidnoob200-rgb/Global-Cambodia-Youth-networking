@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>News – Global Cambodia Youth Network</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+      <a class="brand" href="index.html"><span class="mark"><img src="logo.png" alt="logo"></span> GLOBAL CAMBODIA YOUTH NETWORK</a>
+      <div class="nav-btns"><a href="index.html">HOME</a><a href="about.html">ABOUT US</a><a href="team.html">TEAM</a><a href="contact.html">CONTACT</a><a href="join.html">JOIN US</a><a href="donate.html">DONATE</a><a href="news.html" class="active">NEWSLETTER</a></div>
+    </div></header><section class="news" id="news">
+    <div class="wrap">
+      <h2>News / Statement</h2>
+      <div class="gallery">
+        <a class="shot" href="news-01.jpg"><img src="news-01.jpg" alt="Two GCYN members holding a before-and-after photo of a damaged temple at a rally" width="1200" height="900" loading="lazy"></a>
+        <a class="shot" href="news-02.jpg"><img src="news-02.jpg" alt="Marchers carrying Cambodian flags and the orange GCYN flag along a city street" width="1200" height="900" loading="lazy"></a>
+        <a class="shot" href="news-03.jpg"><img src="news-03.jpg" alt="A member leading the march with a megaphone" width="1200" height="900" loading="lazy"></a>
+        <a class="shot" href="news-04.jpg"><img src="news-04.jpg" alt="Four members holding Cambodian, Japanese and GCYN flags and framed photos beside white flowers" width="1200" height="900" loading="lazy"></a>
+        <a class="shot" href="news-05.jpg"><img src="news-05.jpg" alt="Group photo of members and guests in a hall decorated with Cambodian and Australian flags" width="900" height="1200" loading="lazy"></a>
+        <a class="shot" href="news-06.jpg"><img src="news-06.jpg" alt="Supporters holding Cambodian flags and a sign calling for peace" width="1200" height="800" loading="lazy"></a>
+        <a class="shot" href="news-07.jpg"><img src="news-07.jpg" alt="Members gathered at an event while a speaker addresses the group and a photographer films" width="1200" height="675" loading="lazy"></a>
+        <a class="shot" href="news-08.jpg"><img src="news-08.jpg" alt="A speaker addressing an audience under an orange tent outdoors" width="1200" height="800" loading="lazy"></a>
+        <a class="shot" href="news-09.jpg"><img src="news-09.jpg" alt="A presenter speaking to seated participants at an outdoor workshop" width="1200" height="800" loading="lazy"></a>
+        <a class="shot" href="news-10.jpg"><img src="news-10.jpg" alt="Hands writing on a large poster during a team activity" width="1200" height="800" loading="lazy"></a>
+        <a class="shot" href="news-11.jpg"><img src="news-11.jpg" alt="Participants writing together on a poster at a team table" width="1200" height="800" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" aria-label="Previous photo">&#8249;</button>
+    <img alt="">
+    <button class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>
+  </div>
+  <footer>© 2026 Global Cambodia Youth Network</footer>
+  <script>
+  (function(){
+    var shots=[].slice.call(document.querySelectorAll('.gallery .shot')),lb=document.getElementById('lightbox'),img=lb.querySelector('img'),i=0;
+    function show(n){i=(n+shots.length)%shots.length;var a=shots[i];img.src=a.getAttribute('href');img.alt=a.querySelector('img').alt;lb.hidden=false;document.body.style.overflow='hidden';}
+    function hide(){lb.hidden=true;img.src='';document.body.style.overflow='';}
+    shots.forEach(function(a,n){a.addEventListener('click',function(e){e.preventDefault();show(n);});});
+    lb.querySelector('.lb-close').onclick=hide;
+    lb.querySelector('.lb-prev').onclick=function(e){e.stopPropagation();show(i-1);};
+    lb.querySelector('.lb-next').onclick=function(e){e.stopPropagation();show(i+1);};
+    lb.addEventListener('click',function(e){if(e.target===lb)hide();});
+    document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')hide();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+  })();
+  </script>
+</body>
+</html>

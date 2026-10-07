@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact – Global Cambodia Youth Network</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+      <a class="brand" href="index.html"><span class="mark"><img src="logo.png" alt="logo"></span> GLOBAL CAMBODIA YOUTH NETWORK</a>
+      <div class="nav-btns"><a href="index.html">HOME</a><a href="about.html">ABOUT US</a><a href="team.html">TEAM</a><a href="contact.html" class="active">CONTACT</a><a href="join.html">JOIN US</a><a href="donate.html">DONATE</a><a href="news.html">NEWSLETTER</a></div>
+    </div></header><section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Contact Us</h2>
+      <form id="contact-form" class="msg-form" name="contact" method="POST" action="/thanks.html" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-title">Send a Message</div>
+        <div class="field">
+          <label for="name">NAME<span class="req">*</span></label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">EMAIL<span class="req">*</span></label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">PHONE<span class="req">*</span></label>
+          <input id="phone" class="short" name="phone" type="tel" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="subject">SUBJECT<span class="req">*</span></label>
+          <input id="subject" name="subject" type="text" required>
+        </div>
+        <div class="field">
+          <label for="message">MESSAGE<span class="req">*</span></label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-send">Send</button>
+          <button type="reset" class="btn-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer>© 2026 Global Cambodia Youth Network</footer>
+</body>
+</html>
